@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CRUD.view.AddUserPage">
+             x:Class="CRUD.View.UpdateUserPage">
     <ContentPage.Content>
         <StackLayout>
             <Entry x:Name="txtName" TextChanged="txtName_TextChanged" Placeholder="Full name" Margin="0,15"></Entry>
             <Entry x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Placeholder="Email adress" Margin="0,15"></Entry>
             <Entry x:Name="txtUsername" TextChanged="txtUsername_TextChanged" Placeholder="Username" Margin="0,15"></Entry>
             <Entry x:Name="txtPassword" IsPassword="True" TextChanged="txtPassword_TextChanged" Placeholder="Password" Margin="0,15"></Entry>
-            <Button x:Name="btnAddUser"  Clicked="btnAddUser_Clicked" Text="Add user" TextColor="AliceBlue" BackgroundColor="Green" Margin="0,50,0,0"></Button>
-            <Button x:Name="btnShow" Clicked="btnShow_Clicked" Text="Show"></Button>
-            <Button x:Name="btnEdit" Clicked="btnEdit_Clicked" Text="Edit"></Button>
+            <Button x:Name="btnUpdate"  Clicked="btnUpdate_Clicked" VerticalOptions="EndAndExpand" Text="Update user" TextColor="AliceBlue" BackgroundColor="Green" Margin="0,50,0,0"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

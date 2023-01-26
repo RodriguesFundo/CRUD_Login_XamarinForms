@@ -15,7 +15,7 @@ namespace CRUD.Models
 
         public override string ToString()
         {
-            return "Name: "+this.Name + "\t\t\t\t Email adress: " + this.Email;
+            return this.Name + "\t\t\t\t " + this.Email;
         }
 
 

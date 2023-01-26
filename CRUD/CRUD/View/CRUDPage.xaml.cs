@@ -61,7 +61,8 @@ namespace CRUD.View
         private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             itemSelected= (User)e.SelectedItem;
-            DisplayAlert("Done", itemSelected.Name.ToString(), "OK");
+
+            Navigation.PushModalAsync(new UpdateUserPage(itemSelected));
         }
     }
 }

@@ -17,9 +17,7 @@
         <StackLayout>
             <SearchBar x:Name="searchBar" TextChanged="searchBar_TextChanged" Placeholder="Pesquisar" IsVisible="false"/>
             <ListView x:Name="listView" ItemSelected="listView_ItemSelected"  HorizontalScrollBarVisibility="Always"  IsPullToRefreshEnabled="False" RowHeight="70" BackgroundColor="White" />
-            <Entry x:Name="txtFullName" Placeholder="Full Name" IsVisible="false"/>
-            <Entry x:Name="txtUsername" Placeholder="User Name" IsVisible="false"/>
-            <Entry x:Name="txtEmail" Placeholder="Email Adress" IsVisible="false"/>
+          
         </StackLayout>
 
     </ContentPage.Content>
