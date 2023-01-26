@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD.view.ShowUser">
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem x:Name="tbItemSearch" Clicked="tbItemSearch_Clicked" IconImageSource="iconSearch" Text="search" Order="Primary" Priority="0"/>
+        <ToolbarItem x:Name="tbItemRemove" Clicked="tbItemRemove_Clicked" Text="Remove"  Order="Primary"/>
+        <ToolbarItem x:Name="tbItemAdd" Clicked="tbItemAdd_Clicked" IconImageSource="iconAdd"  Text="Add" Order="Primary" />
+
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <SearchBar x:Name="searchBar" TextChanged="searchBar_TextChanged" Placeholder="Pesquisar" IsVisible="false"/>
+            <ListView x:Name="listView"  HorizontalScrollBarVisibility="Default" IsPullToRefreshEnabled="False" RowHeight="70" BackgroundColor="White" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD.view.MainPage">
+    
+    <StackLayout>
+        <Label FontSize="Title" x:Name="lblTheme" Margin="0,15"
+                HorizontalOptions="CenterAndExpand" Text="Welcome" />
+        <Label FontSize="Large" Margin="0,20" Text="Aqui voce pode registrar os seus usuarios e poder realizar quaisquer operacoes CRUD a qualquer momento"/>
+        <Label x:Name="lblCount" FontSize="Large"  />
+        <Label FontSize="Large" Margin="0,10" Text="Lorem"/>
+        <Label Margin="0,40" FontSize="Large" Text="Para uma consulta de todos nossos usuarios clique no botao abaixo"/>
+        <Button x:Name="btnCRUDOpen" Text="Ver todos" VerticalOptions="EndAndExpand" Clicked="btnCRUDOpen_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
