@@ -5,9 +5,8 @@
     <ContentPage.ToolbarItems>
 
         <ToolbarItem x:Name="tbItemSearch" Clicked="tbItemSearch_Clicked" IconImageSource="iconSearch" Text="search" Order="Primary" Priority="0"/>
-        <ToolbarItem x:Name="tbItemRemove" Clicked="tbItemRemove_Clicked" Text="Remove"  Order="Primary"/>
         <ToolbarItem x:Name="tbItemAdd" Clicked="tbItemAdd_Clicked" Text="Add" Order="Secondary" />
-        <ToolbarItem x:Name="tbItemExit" Text="Sair" Clicked="tbItemExit_Clicked" Order="Secondary" />
+        <ToolbarItem x:Name="tbItemExit" Text="Exit" Clicked="tbItemExit_Clicked" Order="Secondary" />
 
 
     </ContentPage.ToolbarItems>
