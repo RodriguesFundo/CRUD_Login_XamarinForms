@@ -76,10 +76,18 @@ namespace CRUD.View
                     conn.Table<User>().Delete(x => x.Username.Equals(itemSelected.Username));
                     conn.Close();
 
+
                 }
             }
 
         }
 
+        //When pull to refresh a list view
+        private void listView_Refreshing(object sender, EventArgs e)
+        {
+            var conn = new SQLiteConnection(DBpath);
+            listView.ItemsSource = conn.Table<User>();
+            listView.IsRefreshing = false;
+        }
     }
 }

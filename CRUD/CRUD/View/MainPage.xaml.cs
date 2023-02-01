@@ -23,15 +23,30 @@ namespace CRUD.view
         public MainPage()
         {             
             InitializeComponent();
+
             lblCount.Text = "O nosso servico contem actualmente "+ userCount()+" usuarios;";
+
+            if (userCount().Equals(0))
+            {
+                btnCRUDOpen.IsVisible = false;
+                lblIsFirstTime.Text = "E a primeira vez a usar esta aplicacao, adicione um usuario clicando no icone acima";
+                lblTobtnCrud.Text = "Adicione pelo menos um usuario clicando no botao abaixo ";
+            }
+            else { 
+                btnCRUDOpen.IsVisible = true;
+                btnAddFirstUser.IsVisible = false;
+            }
+
 
         }
 
+        //Open  CRUD page
         private async void btnCRUDOpen_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CRUDPage());
         }
 
+        //Count the users,number
         public int userCount() { 
             var db = new SQLiteConnection(DBpath);
             int userCount = db.Table<User>().Count();
@@ -39,7 +54,17 @@ namespace CRUD.view
             return userCount;
         }
 
-        
+        //ADD a new user
+        private void tbItemAdd_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new CreatePage());
+        }
 
+        
+        //Only if the first time to open a APP
+        private void btnAddFirstUser_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new CreatePage());
+        }
     }
 }

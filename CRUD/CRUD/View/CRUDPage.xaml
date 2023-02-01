@@ -4,8 +4,8 @@
              x:Class="CRUD.View.CRUDPage">
     <ContentPage.ToolbarItems>
 
-        <ToolbarItem x:Name="tbItemSearch" Clicked="tbItemSearch_Clicked" IconImageSource="iconSearch" Text="search" Order="Primary" Priority="0"/>
-        <ToolbarItem x:Name="tbItemAdd" Clicked="tbItemAdd_Clicked" Text="Add" Order="Secondary" />
+        <ToolbarItem x:Name="tbItemSearch" Clicked="tbItemSearch_Clicked" IconImageSource="icon_search" Text="search" Order="Primary" Priority="0"/>
+        <ToolbarItem x:Name="tbItemAdd"  Clicked="tbItemAdd_Clicked" IconImageSource="iconAdd" Text="Add" Order="Primary" />
         <ToolbarItem x:Name="tbItemExit" Text="Exit" Clicked="tbItemExit_Clicked" Order="Secondary" />
 
 
@@ -14,8 +14,8 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <SearchBar x:Name="searchBar" TextChanged="searchBar_TextChanged" Placeholder="Pesquisar" IsVisible="false"/>
-            <ListView x:Name="listView" ItemSelected="listView_ItemSelected"  HorizontalScrollBarVisibility="Always"  IsPullToRefreshEnabled="False" RowHeight="70" BackgroundColor="White" />
+            <SearchBar x:Name="searchBar"  TextChanged="searchBar_TextChanged" Placeholder="Pesquisar" IsVisible="false"/>
+            <ListView x:Name="listView" ItemSelected="listView_ItemSelected"  HorizontalScrollBarVisibility="Always"  IsPullToRefreshEnabled="True" Refreshing="listView_Refreshing" RowHeight="70" BackgroundColor="White" />
           
         </StackLayout>
 
